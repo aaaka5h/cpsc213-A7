@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 // 0x100
-int* x;
+int a[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+int* x = a;
 
 // 0x200
 void bar(int i, int j) {
@@ -10,7 +11,7 @@ void bar(int i, int j) {
     return;
 }
 
-// 0x300
+//0x300
 void foo() {
     int i = 1;
     int j = 2;
@@ -22,6 +23,7 @@ void foo() {
 // 0x0
 int main() {
     foo();
+
     for (int i=0; i<10; i++) {
         printf("%d\n", x[i]);
     }
